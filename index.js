@@ -16,6 +16,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use('/api/auth',users)
 app.use('/api/notes',notes)
+app.get('/',(req,res)=>{
+    res.send("api is working")
+})
 
 app.listen(port, () => {
   console.log(`Cloud Notes backend listening on port ${port}`)
